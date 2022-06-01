@@ -3,6 +3,7 @@ import './App.css';
 
 import AppRoute from './AppRoute.js';
 import {BrowserRouter as Router} from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const AppContext=React.createContext();
 
@@ -15,7 +16,7 @@ function App() {
           <Router>
             <AppRoute />
           </Router>
-        Hi
+        
 
 
       </>
