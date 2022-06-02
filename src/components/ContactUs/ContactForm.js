@@ -1,11 +1,23 @@
-import React from "react";
+import React, { useImperativeHandle, useState } from "react";
 
-function ContactForm(props) {
+const ContactForm=React.forwardRef((props, ref)=>{
+
+    const [test,setTest]=useState(0)
+
+    useImperativeHandle(ref, () => ({
+        getTest(){
+            return test;
+        },
+        setTheTest(p){
+            setTest(p)
+        },
+    }));
+
     return (
         <>
-            Contact Form
+            Contact Form123
         </>
     );
-}
+})
 
 export default ContactForm;
